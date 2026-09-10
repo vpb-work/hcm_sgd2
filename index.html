@@ -30,9 +30,9 @@ const DAILY_API_URL='https://script.google.com/macros/s/AKfycbyrIBFG3tI1SN9EVGqk
 const RMP_EMPLOYEES=['Bùi Thái Sơn','Huỳnh Kim Thoa','Hồ Mộng Cầm','Nguyễn Thị Minh','Đào Thị Lệ Uyên'].map(name=>({name,team:'RMP'}));
 const LS_EMPLOYEES=['Lê Quang Chính','Nguyễn Ngọc Duy','Nguyễn Thái Nhật Duy','Phạm Thị Nguyệt Hằng','Đoàn Hồng Thủy','Đặng Thế Văn'].map(name=>({name,team:'LS'}));
 const RMP_LS_EMPLOYEES=[...RMP_EMPLOYEES,...LS_EMPLOYEES];
-const RMD_EMPLOYEES=['Nguyễn Khánh Duy','Bạch Huyền Nam Phương','Nguyễn An Minh Trí','Nguyễn Thị Yến','Bùi Nguyễn Phương Thảo','Ngô Văn Anh','Trần Thị Huỳnh Giao','Trần Thị Thái','Trần Thị Trúc Hương','Trịnh Thái Hiệp','Từ Thị Hoàng Oanh','Vũ Thị Huyền Trang','Đinh Thị Ngọc Sang','Đỗ Thị Hoài Thương','Trần Hoàng Vy','Nguyễn Thị Tuyết Linh','Lê Nguyễn Trúc Ly'].map(name=>({name,team:'RMD'}));
+const RMD_EMPLOYEES=['Nguyễn Khánh Duy','Bạch Huyền Nam Phương','Nguyễn An Minh Trí','Nguyễn Thị Yến','Bùi Nguyễn Phương Thảo','Ngô Văn Anh','Trần Thị Huỳnh Giao','Trần Thị Thái','Trần Thị Trúc Hương','Trịnh Thái Hiệp','Từ Thị Hoàng Oanh','Vũ Thị Huyền Trang','Đinh Thị Ngọc Sang','Đỗ Thị Hoài Thương','Trần Hoàng Vy','Nguyễn Thị Tuyết Linh','Lê Nguyễn Trúc Ly','Vũ Thảo Như'].map(name=>({name,team:'RMD'}));
 const FX_EMPLOYEES=['Lê Minh Trung','Lưu Minh Thư','Lưu Vũ Trường','Phan Thị Thanh Vân','Nguyễn Thành Tân'].map(name=>({name,team:'FX'}));
-const CSR_EMPLOYEES=['Hồ Như Ý','Lê Thị Hồng Thắm','Nguyễn Thùy Quỳnh','Nguyễn Thị Kim Châu','Nguyễn Thị Minh Nguyệt','Nguyễn Thị Trà Ly','Nguyễn Thị Vân','Nguyễn Trần Việt Tú','Phan Phương Thảo','Phạm Bảo Trinh','Lê Văn Cần'].map(name=>({name,team:'CSR'}));
+const CSR_EMPLOYEES=['Hồ Như Ý','Lê Thị Hồng Thắm','Nguyễn Thùy Quỳnh','Nguyễn Thị Minh Nguyệt','Nguyễn Thị Trà Ly','Nguyễn Thị Vân','Nguyễn Trần Việt Tú','Lê Văn Cần','Lê Tâm Như'].map(name=>({name,team:'CSR'}));
 const ALL_EMPLOYEES=[...RMP_EMPLOYEES,...LS_EMPLOYEES,...RMD_EMPLOYEES,...FX_EMPLOYEES,...CSR_EMPLOYEES];let overallRecords=[];
 const $=id=>document.getElementById(id),today=()=>{const d=new Date(),o=d.getTimezoneOffset();return new Date(d-o*60000).toISOString().slice(0,10)},esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function decode64(s){const bin=atob(s),bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
